@@ -1,7 +1,7 @@
-FROM node:10.15-slim
+FROM node:16-slim
 LABEL MAINTAINER https://github.com/josherich/RSSHub/
 
-RUN apt-get update && apt-get install -yq libgconf-2-4 apt-transport-https git --no-install-recommends && apt-get clean \
+RUN apt-get update && apt-get install -yq libgconf-2-4 apt-transport-https git python3 make g++ --no-install-recommends && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
 ENV NODE_ENV production
@@ -43,4 +43,4 @@ COPY . /app
 
 EXPOSE 1200
 ENTRYPOINT ["dumb-init", "--"]
-CMD ["npm", "run", "start"]
+CMD ["node", "index.js"]
