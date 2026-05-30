@@ -15,3 +15,14 @@ tmp
 *.iml
 coverage
 .env
+
+# 新增的忽略文件
+logs/
+*.log
+health-check-report.json
+miit_api_params*.json
+get_miit_api_params*.js
+update_remaining_routes.js
+修复进展报告.md
+health-check.js
+.codegraph/
