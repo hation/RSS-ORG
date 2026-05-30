@@ -7,7 +7,7 @@ const options = {
     feed_url: 'http://www.cankaoxiaoxi.com/roll/',
     url: 'http://www.cankaoxiaoxi.com/roll/',
     baseUrl: 'http://www.cankaoxiaoxi.com/roll/',
-    list_slr: ['li','#tab-cont-1 div:nth-of-type(1) .txt-list-a.fz-14.clear'],
+    list_slr: ['li', '#tab-cont-1 div:nth-of-type(1) .txt-list-a.fz-14.clear'],
     title_slr: 'a',
     link_slr: 'a',
     link_rel: false,

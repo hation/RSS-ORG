@@ -13,9 +13,7 @@ const options = {
     link_rel: true,
     desc_slr: 'a',
     time_slr: '',
-    time_map: (timeString) => {
-        return timeString.split('\n')[0];
-    }
+    time_map: (timeString) => timeString.split('\n')[0],
 };
 
 module.exports = template(options);

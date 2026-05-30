@@ -589,7 +589,6 @@ let routerlist = [
     //     route: '/nmpa/news',
     //     param: '',
     // },
-
 ];
 
 // TODO: fix
@@ -598,8 +597,7 @@ let routerlist = [
 // { "url": "/court/wenshu", "name": "中国裁判文书网", "route": "/court/wenshu", "param": "" },
 // /wangxinban/fabu
 
-const homepage = (template) => {
-    return async (ctx) => {
+const homepage = (template) => async (ctx) => {
         ctx.set({
             'Content-Type': 'text/html; charset=UTF-8',
         });
@@ -624,7 +622,7 @@ const homepage = (template) => {
         });
 
         routerlist = routerlist.map((route) => {
-            route['status'] = ctx.debug.status[route['route']];
+            route.status = ctx.debug.status[route.route];
             return route;
         });
 
@@ -659,7 +657,6 @@ const homepage = (template) => {
             },
         });
     };
-};
 
 const startTime = +new Date();
 router.get(['/', '/rss'], homepage('welcome'));
@@ -900,6 +897,5 @@ router.get('/us/hud/news', require('./routes/us/hud/news'));
 router.get('/us/treasury/press', require('./routes/us/treasury/press'));
 
 router.get('/us/transportation/press', require('./routes/us/transportation/press'));
-
 
 module.exports = router;

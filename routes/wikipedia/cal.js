@@ -4,13 +4,12 @@ const config = require('../../config');
 const wtf = require('wtf_wikipedia');
 
 module.exports = async (ctx) => {
-    const doc = await wtf.fetch('2018', 'zh')
+    const doc = await wtf.fetch('2018', 'zh');
 
-    const months = doc.json()['sections'].filter(e => e['title'].match(/\d+月$/))
-    const items = months.map(e => {
-        e['lists'].map(r => console.log(r))
-    })
-
+    const months = doc.json().sections.filter((e) => e.title.match(/\d+月$/));
+    const items = months.map((e) => {
+        e.lists.map((r) => console.log(r));
+    });
 
     const chapter_item = [];
 

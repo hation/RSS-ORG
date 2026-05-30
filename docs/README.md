@@ -4,7 +4,7 @@ sidebarDepth: 0
 
 # 专注于组织部门 RSS 的分支
 
-这是一个RSS源的合集，专注于国家政府及各种组织新闻动态。
+这是一个 RSS 源的合集，专注于国家政府及各种组织新闻动态。
 
 [http://rss.mindynode.com/docs/](http://rss.mindynode.com/docs/)
 

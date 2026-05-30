@@ -1,15 +1,14 @@
 const fs = require('fs');
 
 module.exports = function(options = {}) {
-
     return async function cache(ctx, next) {
         const { url, path } = ctx.request;
         const key = path.replace(/\//g, '-');
 
         const fkey = key + '.json';
-        const filepath = `./public/data/${fkey}`
+        const filepath = `./public/data/${fkey}`;
 
-        let body = "";
+        let body = '';
         let ok = true;
 
         try {
@@ -33,15 +32,12 @@ module.exports = function(options = {}) {
             return;
         }
         try {
-            let newbody = JSON.stringify(ctx.state.data);
+            const newbody = JSON.stringify(ctx.state.data);
             if (!fs.existsSync(filepath) || body !== newbody) {
                 fs.writeFileSync(filepath, newbody, {});
             }
         } catch (err) {
             console.log(err);
         }
-
     };
-
 };
-

@@ -1,4 +1,3 @@
-
 const template = require('../template_page');
 
 const options = {
@@ -11,7 +10,7 @@ const options = {
     list_slr: ['li.listMargin', '.marin > .clearself > div:nth-of-type(2) ul.list'],
     title_slr: 'a',
     link_slr: 'a',
-    link_map: function(link)  {
+    link_map: function(link) {
         return link.match(/javascript:loadURL\('(.+)'\)/)[1];
     },
     link_rel: true,

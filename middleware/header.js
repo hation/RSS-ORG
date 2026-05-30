@@ -9,7 +9,6 @@ module.exports = async (ctx, next) => {
         'Access-Control-Allow-Methods': 'PUT, POST, GET, DELETE, OPTIONS',
         'Content-Type': 'application/xml; charset=utf-8',
     };
-    if (!ctx.url.includes('/chart/'))
-        ctx.set(headers);
+    if (!ctx.url.includes('/chart/')) {ctx.set(headers);}
     await next();
 };

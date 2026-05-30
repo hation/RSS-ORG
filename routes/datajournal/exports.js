@@ -14,7 +14,7 @@ module.exports = async (ctx) => {
         headers: {
             'User-Agent': config.ua,
             Referer: baseUrl,
-        }
+        },
     });
     const response2 = await axios({
         method: 'get',
@@ -22,7 +22,7 @@ module.exports = async (ctx) => {
         headers: {
             'User-Agent': config.ua,
             Referer: baseUrl,
-        }
+        },
     });
     const $1 = cheerio.load(response1.data);
     const $2 = cheerio.load(response2.data);
@@ -32,7 +32,7 @@ module.exports = async (ctx) => {
 
     const imps = {};
     for (let i = 0; i < list2.length; i++) {
-        if (i == 0) continue;
+        if (i == 0) {continue;}
         const name = $2(list2[i])
             .find('td:nth-of-type(2) a')
             .eq(0)
@@ -49,7 +49,7 @@ module.exports = async (ctx) => {
 
     const chapter_item = [];
     for (let i = 0; i < list1.length; i++) {
-        if (i == 0) continue;
+        if (i == 0) {continue;}
         let name = $1(list1[i])
             .find('td:nth-of-type(2) a')
             .eq(0)
@@ -65,9 +65,9 @@ module.exports = async (ctx) => {
             .find('td:nth-of-type(5)')
             .eq(0)
             .text()
-            .replace("\n", '');
+            .replace('\n', '');
 
-        const gdp = percent ? parseInt(exp_amount) * 100  / parseInt(percent): exp_amount;
+        const gdp = percent ? (parseInt(exp_amount) * 100) / parseInt(percent) : exp_amount;
         name = name.replace('Korea, South', 'South Korea');
         const imp_amount = imps[name] || 0;
 
@@ -76,9 +76,9 @@ module.exports = async (ctx) => {
             exp_amount: exp_amount,
             imp_amount: imp_amount,
             percent: percent,
-            exp_arr: new Array(Math.floor(exp_amount/10000)).map(e => 1),
-            imp_arr: new Array(Math.floor(imp_amount/10000)).map(e => 1),
-            gdp_arr: new Array(Math.floor(gdp/10000)).map(e => 1)
+            exp_arr: new Array(Math.floor(exp_amount / 10000)).map((e) => 1),
+            imp_arr: new Array(Math.floor(imp_amount / 10000)).map((e) => 1),
+            gdp_arr: new Array(Math.floor(gdp / 10000)).map((e) => 1),
         };
         chapter_item.push(item);
     }
@@ -87,6 +87,6 @@ module.exports = async (ctx) => {
         title: 'list of countries by exports/imports (2017)',
         link: url1,
         description: 'list of countries by exports/imports (2017)',
-        item: chapter_item
+        item: chapter_item,
     };
 };

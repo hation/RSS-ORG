@@ -17,7 +17,7 @@ const options = {
     time_map: function(time) {
         return time.slice(1, -1);
     },
-    cn: false
+    cn: false,
 };
 
 module.exports = template(options);

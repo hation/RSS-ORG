@@ -29,14 +29,16 @@ module.exports = async (ctx) => {
         title: `${name}的微博`,
         link: `http://weibo.com/${uid}/`,
         description: `${name}的微博`,
-        item: response.data.data.cards.filter((item) => item.mblog && !item.mblog.isTop).map((item) => {
-            const title = item.mblog.text.replace(/<.*?>/g, '');
-            return {
-                title: title.length > 24 ? title.slice(0, 24) + '...' : title,
-                description: weiboUtils.format(item.mblog),
-                pubDate: weiboUtils.getTime(item.mblog.created_at),
-                link: `https://weibo.com/${uid}/${item.mblog.bid}`,
-            };
-        }),
+        item: response.data.data.cards
+            .filter((item) => item.mblog && !item.mblog.isTop)
+            .map((item) => {
+                const title = item.mblog.text.replace(/<.*?>/g, '');
+                return {
+                    title: title.length > 24 ? title.slice(0, 24) + '...' : title,
+                    description: weiboUtils.format(item.mblog),
+                    pubDate: weiboUtils.getTime(item.mblog.created_at),
+                    link: `https://weibo.com/${uid}/${item.mblog.bid}`,
+                };
+            }),
     };
 };

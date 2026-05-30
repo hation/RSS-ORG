@@ -7,7 +7,7 @@ const options = {
     feed_url: 'http://www.gov.cn/shuju/yaowen.htm',
     url: 'http://www.gov.cn/shuju/yaowen.htm',
     baseUrl: 'http://www.gov.cn/',
-    list_slr: ['ul li','.list.list_1.list_2'],
+    list_slr: ['ul li', '.list.list_1.list_2'],
     title_slr: 'a',
     link_slr: 'a',
     link_rel: true,

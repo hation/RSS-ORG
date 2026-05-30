@@ -1,11 +1,11 @@
 const template = require('../template_page');
 
 const options = {
-    feed_title: query => `微博 头条 [${query.split(',').join(' ')}]`,
+    feed_title: (query) => `微博 头条 [${query.split(',').join(' ')}]`,
     feed_desc: '微博 头条',
     feed_image: 'https://imgs.t.sinajs.cn/t6/style/images/global_nav/WB_logo-x2.png?id=1404211047727',
     feed_url: 'http://s.weibo.com',
-    url: query => encodeURI(`https://s.weibo.com/article?q=${query.split(',').join(' ')}&limitType=article`),
+    url: (query) => encodeURI(`https://s.weibo.com/article?q=${query.split(',').join(' ')}&limitType=article`),
     baseUrl: 'http://s.weibo.com',
     list_slr: ['.card-wrap', '#pl_feedlist_index'],
     title_slr: 'h3 a',

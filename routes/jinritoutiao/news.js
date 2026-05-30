@@ -32,10 +32,12 @@ module.exports = async (ctx) => {
     ctx.state.data = {
         title: `今日头条-${category}`,
         link: 'https://www.toutiao.com/',
-        item: list.filter((item) => item.is_feed_ad === false).map((item) => ({
-            title: item.title,
-            description: item.abstract,
-            link: baseUrl + item.source_url.replace('/group/', '/a'),
-        })),
+        item: list
+            .filter((item) => item.is_feed_ad === false)
+            .map((item) => ({
+                title: item.title,
+                description: item.abstract,
+                link: baseUrl + item.source_url.replace('/group/', '/a'),
+            })),
     };
 };

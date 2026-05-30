@@ -1,0 +1,242 @@
+[
+    {
+        "category": {
+            "name": "领导活动",
+            "file": "routes/gongxinbu/lingdao.js",
+            "url": "https://www.miit.gov.cn/xwfb/bldhd/index.html"
+        },
+        "apiParams": {
+            "pageUrl": "https://www.miit.gov.cn/xwfb/bldhd/index.html",
+            "apiUrl": "https://www.miit.gov.cn/api-gateway/jpaas-publish-server/front/page/build/unit?parseType=buildstatic&webId=8d828e408d90447786ddbe128d495e9e&tplSetId=209741b2109044b5b7695700b2bec37e&pageType=column&tagId=%E5%8F%B3%E4%BE%A7%E5%86%85%E5%AE%B9&editType=null&pageId=d3e2bede1bc045e2875fc7161c01db7d",
+            "queryData": {
+                "parseType": "buildstatic",
+                "webId": "8d828e408d90447786ddbe128d495e9e",
+                "tplSetId": "209741b2109044b5b7695700b2bec37e",
+                "pageType": "column",
+                "tagId": "右侧内容",
+                "editType": "null",
+                "pageId": "d3e2bede1bc045e2875fc7161c01db7d"
+            }
+        }
+    },
+    {
+        "category": {
+            "name": "对外交流",
+            "file": "routes/gongxinbu/duiwai.js",
+            "url": "https://www.miit.gov.cn/xwfb/gxdt/sjdt/index.html"
+        },
+        "apiParams": {
+            "pageUrl": "https://www.miit.gov.cn/xwfb/gxdt/sjdt/index.html",
+            "apiUrl": "https://www.miit.gov.cn/api-gateway/jpaas-publish-server/front/page/build/unit?parseType=buildstatic&webId=8d828e408d90447786ddbe128d495e9e&tplSetId=209741b2109044b5b7695700b2bec37e&pageType=column&tagId=%E5%8F%B3%E4%BE%A7%E5%86%85%E5%AE%B9&editType=null&pageId=028da85b0dbd4c9cb96fd5f421cd32b8",
+            "queryData": {
+                "parseType": "buildstatic",
+                "webId": "8d828e408d90447786ddbe128d495e9e",
+                "tplSetId": "209741b2109044b5b7695700b2bec37e",
+                "pageType": "column",
+                "tagId": "右侧内容",
+                "editType": "null",
+                "pageId": "028da85b0dbd4c9cb96fd5f421cd32b8"
+            }
+        }
+    },
+    {
+        "category": {
+            "name": "工信动态",
+            "file": "routes/gongxinbu/gongzuo.js",
+            "url": "https://www.miit.gov.cn/xwfb/gxdt/index.html"
+        },
+        "apiParams": {
+            "pageUrl": "https://www.miit.gov.cn/xwfb/gxdt/index.html",
+            "apiUrl": "https://www.miit.gov.cn/api-gateway/jpaas-publish-server/front/page/build/unit?parseType=buildstatic&webId=8d828e408d90447786ddbe128d495e9e&tplSetId=209741b2109044b5b7695700b2bec37e&pageType=column&tagId=%E5%8F%B3%E4%BE%A7%E5%86%85%E5%AE%B9&editType=null&pageId=ca517c97303b40cf80bd668b35f6148f",
+            "queryData": {
+                "parseType": "buildstatic",
+                "webId": "8d828e408d90447786ddbe128d495e9e",
+                "tplSetId": "209741b2109044b5b7695700b2bec37e",
+                "pageType": "column",
+                "tagId": "右侧内容",
+                "editType": "null",
+                "pageId": "ca517c97303b40cf80bd668b35f6148f"
+            }
+        }
+    },
+    {
+        "category": {
+            "name": "地方动态",
+            "file": "routes/gongxinbu/fagui.js",
+            "url": "https://www.miit.gov.cn/xwfb/gxdt/dfdt/index.html"
+        },
+        "apiParams": {
+            "pageUrl": "https://www.miit.gov.cn/xwfb/gxdt/dfdt/index.html",
+            "apiUrl": "https://www.miit.gov.cn/api-gateway/jpaas-publish-server/front/page/build/unit?parseType=buildstatic&webId=8d828e408d90447786ddbe128d495e9e&tplSetId=209741b2109044b5b7695700b2bec37e&pageType=column&tagId=%E5%8F%B3%E4%BE%A7%E5%86%85%E5%AE%B9&editType=null&pageId=e4d6c56063fa4edca257cc2e24ad473c",
+            "queryData": {
+                "parseType": "buildstatic",
+                "webId": "8d828e408d90447786ddbe128d495e9e",
+                "tplSetId": "209741b2109044b5b7695700b2bec37e",
+                "pageType": "column",
+                "tagId": "右侧内容",
+                "editType": "null",
+                "pageId": "e4d6c56063fa4edca257cc2e24ad473c"
+            }
+        }
+    },
+    {
+        "category": {
+            "name": "部属动态",
+            "file": "routes/gongxinbu/gongkai.js",
+            "url": "https://www.miit.gov.cn/xwfb/gxdt/bsdt/index.html"
+        },
+        "apiParams": {
+            "pageUrl": "https://www.miit.gov.cn/xwfb/gxdt/bsdt/index.html",
+            "apiUrl": "https://www.miit.gov.cn/api-gateway/jpaas-publish-server/front/page/build/unit?parseType=buildstatic&webId=8d828e408d90447786ddbe128d495e9e&tplSetId=209741b2109044b5b7695700b2bec37e&pageType=column&tagId=%E5%8F%B3%E4%BE%A7%E5%86%85%E5%AE%B9&editType=null&pageId=161ae25e72be496f93cd1c1a79f5cc2b",
+            "queryData": {
+                "parseType": "buildstatic",
+                "webId": "8d828e408d90447786ddbe128d495e9e",
+                "tplSetId": "209741b2109044b5b7695700b2bec37e",
+                "pageType": "column",
+                "tagId": "右侧内容",
+                "editType": "null",
+                "pageId": "161ae25e72be496f93cd1c1a79f5cc2b"
+            }
+        }
+    },
+    {
+        "category": {
+            "name": "统计-综合",
+            "file": "routes/gongxinbu/tongji-zonghe.js",
+            "url": "https://www.miit.gov.cn/gxsj/tjfx/index.html"
+        },
+        "apiParams": {
+            "pageUrl": "https://www.miit.gov.cn/gxsj/tjfx/index.html",
+            "apiUrl": "https://www.miit.gov.cn/api-gateway/jpaas-publish-server/front/page/build/unit?parseType=buildstatic&webId=8d828e408d90447786ddbe128d495e9e&tplSetId=209741b2109044b5b7695700b2bec37e&pageType=column&tagId=%E5%8F%B3%E4%BE%A7%E5%86%85%E5%AE%B9&editType=null&pageId=b5946cb121b84c30b9ac608467c9df4e",
+            "queryData": {
+                "parseType": "buildstatic",
+                "webId": "8d828e408d90447786ddbe128d495e9e",
+                "tplSetId": "209741b2109044b5b7695700b2bec37e",
+                "pageType": "column",
+                "tagId": "右侧内容",
+                "editType": "null",
+                "pageId": "b5946cb121b84c30b9ac608467c9df4e"
+            }
+        }
+    },
+    {
+        "category": {
+            "name": "统计-电子",
+            "file": "routes/gongxinbu/tongji-dianzi.js",
+            "url": "https://www.miit.gov.cn/gxsj/tjfx/index.html"
+        },
+        "apiParams": {
+            "pageUrl": "https://www.miit.gov.cn/gxsj/tjfx/index.html",
+            "apiUrl": "https://www.miit.gov.cn/api-gateway/jpaas-publish-server/front/page/build/unit?parseType=buildstatic&webId=8d828e408d90447786ddbe128d495e9e&tplSetId=209741b2109044b5b7695700b2bec37e&pageType=column&tagId=%E5%8F%B3%E4%BE%A7%E5%86%85%E5%AE%B9&editType=null&pageId=b5946cb121b84c30b9ac608467c9df4e",
+            "queryData": {
+                "parseType": "buildstatic",
+                "webId": "8d828e408d90447786ddbe128d495e9e",
+                "tplSetId": "209741b2109044b5b7695700b2bec37e",
+                "pageType": "column",
+                "tagId": "右侧内容",
+                "editType": "null",
+                "pageId": "b5946cb121b84c30b9ac608467c9df4e"
+            }
+        }
+    },
+    {
+        "category": {
+            "name": "统计-软件",
+            "file": "routes/gongxinbu/tongji-ruanjian.js",
+            "url": "https://www.miit.gov.cn/gxsj/tjfx/index.html"
+        },
+        "apiParams": {
+            "pageUrl": "https://www.miit.gov.cn/gxsj/tjfx/index.html",
+            "apiUrl": "https://www.miit.gov.cn/api-gateway/jpaas-publish-server/front/page/build/unit?parseType=buildstatic&webId=8d828e408d90447786ddbe128d495e9e&tplSetId=209741b2109044b5b7695700b2bec37e&pageType=column&tagId=%E5%8F%B3%E4%BE%A7%E5%86%85%E5%AE%B9&editType=null&pageId=b5946cb121b84c30b9ac608467c9df4e",
+            "queryData": {
+                "parseType": "buildstatic",
+                "webId": "8d828e408d90447786ddbe128d495e9e",
+                "tplSetId": "209741b2109044b5b7695700b2bec37e",
+                "pageType": "column",
+                "tagId": "右侧内容",
+                "editType": "null",
+                "pageId": "b5946cb121b84c30b9ac608467c9df4e"
+            }
+        }
+    },
+    {
+        "category": {
+            "name": "统计-通信",
+            "file": "routes/gongxinbu/tongji-tongxin.js",
+            "url": "https://www.miit.gov.cn/gxsj/tjfx/index.html"
+        },
+        "apiParams": {
+            "pageUrl": "https://www.miit.gov.cn/gxsj/tjfx/index.html",
+            "apiUrl": "https://www.miit.gov.cn/api-gateway/jpaas-publish-server/front/page/build/unit?parseType=buildstatic&webId=8d828e408d90447786ddbe128d495e9e&tplSetId=209741b2109044b5b7695700b2bec37e&pageType=column&tagId=%E5%8F%B3%E4%BE%A7%E5%86%85%E5%AE%B9&editType=null&pageId=b5946cb121b84c30b9ac608467c9df4e",
+            "queryData": {
+                "parseType": "buildstatic",
+                "webId": "8d828e408d90447786ddbe128d495e9e",
+                "tplSetId": "209741b2109044b5b7695700b2bec37e",
+                "pageType": "column",
+                "tagId": "右侧内容",
+                "editType": "null",
+                "pageId": "b5946cb121b84c30b9ac608467c9df4e"
+            }
+        }
+    },
+    {
+        "category": {
+            "name": "统计-消费品",
+            "file": "routes/gongxinbu/tongji-xiaofeipin.js",
+            "url": "https://www.miit.gov.cn/gxsj/tjfx/index.html"
+        },
+        "apiParams": {
+            "pageUrl": "https://www.miit.gov.cn/gxsj/tjfx/index.html",
+            "apiUrl": "https://www.miit.gov.cn/api-gateway/jpaas-publish-server/front/page/build/unit?parseType=buildstatic&webId=8d828e408d90447786ddbe128d495e9e&tplSetId=209741b2109044b5b7695700b2bec37e&pageType=column&tagId=%E5%8F%B3%E4%BE%A7%E5%86%85%E5%AE%B9&editType=null&pageId=b5946cb121b84c30b9ac608467c9df4e",
+            "queryData": {
+                "parseType": "buildstatic",
+                "webId": "8d828e408d90447786ddbe128d495e9e",
+                "tplSetId": "209741b2109044b5b7695700b2bec37e",
+                "pageType": "column",
+                "tagId": "右侧内容",
+                "editType": "null",
+                "pageId": "b5946cb121b84c30b9ac608467c9df4e"
+            }
+        }
+    },
+    {
+        "category": {
+            "name": "统计-原材料",
+            "file": "routes/gongxinbu/tongji-yuancailiao.js",
+            "url": "https://www.miit.gov.cn/gxsj/tjfx/index.html"
+        },
+        "apiParams": {
+            "pageUrl": "https://www.miit.gov.cn/gxsj/tjfx/index.html",
+            "apiUrl": "https://www.miit.gov.cn/api-gateway/jpaas-publish-server/front/page/build/unit?parseType=buildstatic&webId=8d828e408d90447786ddbe128d495e9e&tplSetId=209741b2109044b5b7695700b2bec37e&pageType=column&tagId=%E5%8F%B3%E4%BE%A7%E5%86%85%E5%AE%B9&editType=null&pageId=b5946cb121b84c30b9ac608467c9df4e",
+            "queryData": {
+                "parseType": "buildstatic",
+                "webId": "8d828e408d90447786ddbe128d495e9e",
+                "tplSetId": "209741b2109044b5b7695700b2bec37e",
+                "pageType": "column",
+                "tagId": "右侧内容",
+                "editType": "null",
+                "pageId": "b5946cb121b84c30b9ac608467c9df4e"
+            }
+        }
+    },
+    {
+        "category": {
+            "name": "统计-装备",
+            "file": "routes/gongxinbu/tongji-zhuangbei.js",
+            "url": "https://www.miit.gov.cn/gxsj/tjfx/index.html"
+        },
+        "apiParams": {
+            "pageUrl": "https://www.miit.gov.cn/gxsj/tjfx/index.html",
+            "apiUrl": "https://www.miit.gov.cn/api-gateway/jpaas-publish-server/front/page/build/unit?parseType=buildstatic&webId=8d828e408d90447786ddbe128d495e9e&tplSetId=209741b2109044b5b7695700b2bec37e&pageType=column&tagId=%E5%8F%B3%E4%BE%A7%E5%86%85%E5%AE%B9&editType=null&pageId=b5946cb121b84c30b9ac608467c9df4e",
+            "queryData": {
+                "parseType": "buildstatic",
+                "webId": "8d828e408d90447786ddbe128d495e9e",
+                "tplSetId": "209741b2109044b5b7695700b2bec37e",
+                "pageType": "column",
+                "tagId": "右侧内容",
+                "editType": "null",
+                "pageId": "b5946cb121b84c30b9ac608467c9df4e"
+            }
+        }
+    }
+]

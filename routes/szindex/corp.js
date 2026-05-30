@@ -15,25 +15,25 @@ module.exports = async (ctx) => {
             Referer: baseUrl,
         },
         data: {
-            "seDate":["",""],
-            "stock":[secode],
-            "channelCode":["listedNotice_disc"],
-            "pageSize":30,
-            "pageNum":1
+            seDate: ['', ''],
+            stock: [secode],
+            channelCode: ['listedNotice_disc'],
+            pageSize: 30,
+            pageNum: 1,
         },
         responseType: 'arraybuffer',
     });
     const raw = response.data;
-    const list = JSON.parse(raw)['data'];
+    const list = JSON.parse(raw).data;
     ctx.state.data = {
         title: `深圳证券交易所 ${secode}`,
-        link: `http://www.szse.cn/disclosure/listed/notice/index.html`,
+        link: 'http://www.szse.cn/disclosure/listed/notice/index.html',
         description: `深圳证券交易所 ${secode}`,
         item: list.map((item) => ({
-                title: item['title'],
-                description: item['title'],
-                link: baseUrl + item['attachPath'],
-                pubDate: new Date(item['publishTime']).toUTCString(),
-            })),
+            title: item.title,
+            description: item.title,
+            link: baseUrl + item.attachPath,
+            pubDate: new Date(item.publishTime).toUTCString(),
+        })),
     };
 };

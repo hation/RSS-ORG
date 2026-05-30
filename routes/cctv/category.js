@@ -3,15 +3,15 @@ const config = require('../../config');
 
 module.exports = async (ctx) => {
     const category = ctx.params.category;
-    const url = `http://news.cctv.com/${category}/data/index.json`
+    const url = `http://news.cctv.com/${category}/data/index.json`;
 
     const response = await axios({
         method: 'get',
         url: url,
         headers: {
             'User-Agent': config.ua,
-            'Referer': url,
-        }
+            Referer: url,
+        },
     });
 
     const data = response.data;
@@ -26,7 +26,7 @@ module.exports = async (ctx) => {
             title: item.title,
             description: item.description,
             link: item.url,
-            pubDate: new Date(item.dateTime).toUTCString()
+            pubDate: new Date(item.dateTime).toUTCString(),
         })),
     };
 };

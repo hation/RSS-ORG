@@ -15,20 +15,12 @@ module.exports = (options) => async (ctx) => {
 
     const browser = await puppeteer.launch({
         headless: true,
-        args: ['--no-sandbox',
-                '--disable-setuid-sandbox',
-                '--disable-infobars',
-                '--window-position=0,0',
-                '--ignore-certifcate-errors',
-                '--ignore-certifcate-errors-spki-list',
-                `--user-agent=${config.ua}`],
+        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-infobars', '--window-position=0,0', '--ignore-certifcate-errors', '--ignore-certifcate-errors-spki-list', `--user-agent=${config.ua}`],
     });
     const page = await browser.newPage();
-    await page.goto(options.url, {waitUntil: 'networkidle0'});
+    await page.goto(options.url, { waitUntil: 'networkidle0' });
     await page.waitFor(options.timeout || 1000);
-    const responseHtml = await page.evaluate(() => {
-        return document.querySelector('html').innerHTML;
-    })
+    const responseHtml = await page.evaluate(() => document.querySelector('html').innerHTML);
     setTimeout(async () => {
         if ((await browser.process()).signalCode) {
             browser.close();
@@ -43,7 +35,7 @@ module.exports = (options) => async (ctx) => {
 
     if (options.list_filter) {
         list = list.filter(function(i, item) {
-            return options.list_filter(i, $(item))
+            return options.list_filter(i, $(item));
         });
     }
 
@@ -81,7 +73,7 @@ module.exports = (options) => async (ctx) => {
                 time = time.eq(0).text();
             }
 
-            if (title == "") {
+            if (title == '') {
                 continue;
             }
 

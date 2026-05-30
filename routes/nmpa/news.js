@@ -18,8 +18,8 @@ const options = {
     },
     cn: true,
     headers: {
-        cookie: 'FSSBBIl1UgzbN7N80S=fDLJSnTuFiqdXCVN5n3W6CdHD0O1c3gVOImhtF9MhE2kkePGW6.b8bWy1p1eRTEK;'
-    }
+        cookie: 'FSSBBIl1UgzbN7N80S=fDLJSnTuFiqdXCVN5n3W6CdHD0O1c3gVOImhtF9MhE2kkePGW6.b8bWy1p1eRTEK;',
+    },
 };
 
 module.exports = template(options);

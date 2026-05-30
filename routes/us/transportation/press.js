@@ -16,6 +16,3 @@ const options = {
 };
 
 module.exports = template(options);
-
-
-

@@ -83,7 +83,6 @@ if (config.cacheType === 'memory') {
     );
 }
 
-
 // router
 app.use(router.routes()).use(router.allowedMethods());
 

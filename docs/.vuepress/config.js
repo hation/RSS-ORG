@@ -9,7 +9,7 @@ module.exports = {
             ga: 'UA-29751795-6',
         },
         '@vuepress/pwa': {
-            serviceWorker: true
+            serviceWorker: true,
         },
         '@vuepress/back-to-top': true,
     },
@@ -88,12 +88,7 @@ module.exports = {
                             title: '路由',
                             collapsable: false,
                             sidebarDepth: 2,
-                            children: [
-                                'state-org',
-                                'state-council',
-                                'others',
-                                'todos',
-                            ],
+                            children: ['state-org', 'state-council', 'others', 'todos'],
                         },
                     ],
                 },

@@ -32,9 +32,9 @@ usage: git [--version] [--help] [-C <path>] [-c name=value]
 
 :::
 
-*   Windows：从 Git 官网直接[下载安装程序](https://git-scm.com/downloads)。
-*   MacOS：使用 [Homebrew](https://brew.sh/) `$ brew install git` 或者[下载安装程序](https://git-scm.com/download/mac)。
-*   Linux：使用您的包管理器安装例如 `$ sudo apt-get install git`。
+-   Windows：从 Git 官网直接[下载安装程序](https://git-scm.com/downloads)。
+-   MacOS：使用 [Homebrew](https://brew.sh/) `$ brew install git` 或者[下载安装程序](https://git-scm.com/download/mac)。
+-   Linux：使用您的包管理器安装例如 `$ sudo apt-get install git`。
 
 ### 安装 Node.JS
 

@@ -27,27 +27,33 @@ module.exports = (options) => async (ctx) => {
     let chapter_items = [];
 
     if (options.patterns) {
-        const htmlText = responseHtml.toString('utf8')
-        options.patterns.map(pattern => {
+        const htmlText = responseHtml.toString('utf8');
+        options.patterns.map((pattern) => {
             while ((match = pattern.exec(htmlText)) !== null) {
-                chapter_items.push(match[1])
+                chapter_items.push(match[1]);
             }
-        })
-        chapter_items = chapter_items.map(options.mapper)
+        });
+        chapter_items = chapter_items.map(options.mapper);
     } else {
         const $ = cheerio.load(responseHtml);
         let list = $(options.list_slr[0], options.list_slr[1]);
 
         if (options.list_filter) {
             list = list.filter(function(i, item) {
-                return options.list_filter(i, $(item))
+                return options.list_filter(i, $(item));
             });
         }
 
-        const time_map = options.time_map || function(time) {
-            return time; };
-        const link_map = options.link_map || function(link) {
-            return link; };
+        const time_map =
+            options.time_map ||
+            function(time) {
+                return time;
+            };
+        const link_map =
+            options.link_map ||
+            function(link) {
+                return link;
+            };
 
         for (let i = 0; i < list.length; i++) {
             let item = {};
