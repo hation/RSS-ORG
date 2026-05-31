@@ -38,7 +38,7 @@ module.exports = async (ctx) => {
                     .trim();
 
                 if (title && href) {
-                    const fullUrl = href.startsWith('http') ? href : baseUrl + href.replace('./', '/');
+                    const fullUrl = href.startsWith('http') ? href : baseUrl + '/xxgk/gsxx/dybalx/' + href.replace('./', '');
                     items.push({
                         title: title,
                         description: title,
