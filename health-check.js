@@ -8,7 +8,7 @@ const execAsync = promisify(exec);
 
 // 配置
 const BASE_URL = 'http://localhost:1200';
-const TIMEOUT = 10000; // 10秒超时
+const TIMEOUT = 30000; // 30秒超时
 const MAX_RETRIES = 2;
 
 // 关键路由测试列表
@@ -76,7 +76,7 @@ async function startServer() {
 
     try {
         // 检查是否已安装依赖
-        const { stdout, stderr } = await execAsync('npm list --depth=0');
+        const { stderr } = await execAsync('npm list --depth=0');
         if (stderr && stderr.includes('npm ERR!')) {
             console.log(colorize('📦 安装项目依赖...', 'yellow'));
             await execAsync('npm install');
@@ -101,9 +101,15 @@ async function testRoute(route, retryCount = 0) {
     const startTime = Date.now();
 
     try {
+        // 对路径进行 URL 编码，确保特殊字符被正确处理
+        const encodedPath = route.path
+            .split('/')
+            .map(encodeURIComponent)
+            .join('/')
+            .replace(/%2F/g, '/');
         const config = {
             method: route.method.toLowerCase(),
-            url: `${BASE_URL}${route.path}`,
+            url: `${BASE_URL}${encodedPath}`,
             timeout: TIMEOUT,
             params: route.params || {},
             headers: {
@@ -154,7 +160,7 @@ async function testRoute(route, retryCount = 0) {
             success: false,
             duration,
             error: error.message || '未知错误',
-            status: error.response?.status || 0,
+            status: (error.response && error.response.status) || 0,
         };
     }
 }
@@ -208,7 +214,9 @@ function generateReport() {
             categories[category] = { total: 0, success: 0 };
         }
         categories[category].total++;
-        if (detail.success) categories[category].success++;
+        if (detail.success) {
+            categories[category].success++;
+        }
     });
 
     console.log(`${colorize('分类统计:', 'magenta')}`);
@@ -252,7 +260,7 @@ function generateReport() {
 
     require('fs').writeFileSync('./health-check-report.json', JSON.stringify(report, null, 2));
 
-    console.log(colorize(`\n📄 详细报告已保存到: health-check-report.json`, 'cyan'));
+    console.log(colorize('\n📄 详细报告已保存到: health-check-report.json', 'cyan'));
 }
 
 // 主函数

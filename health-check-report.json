@@ -1,11 +1,11 @@
 {
-    "timestamp": "2026-05-30T16:12:03.941Z",
+    "timestamp": "2026-05-31T03:59:31.244Z",
     "summary": {
         "total": 12,
-        "success": 10,
-        "failed": 2,
+        "success": 12,
+        "failed": 0,
         "warnings": 0,
-        "successRate": 83.3
+        "successRate": 100
     },
     "details": [
         {
@@ -13,23 +13,23 @@
             "path": "/guowuyuan/xinwen",
             "success": true,
             "status": 200,
-            "duration": 251,
-            "size": 184185
+            "duration": 220,
+            "size": 184131
         },
         {
             "name": "国务院-动态",
             "path": "/guowuyuan/dongtai",
             "success": true,
             "status": 200,
-            "duration": 87,
-            "size": 184185
+            "duration": 53,
+            "size": 184131
         },
         {
             "name": "工信部-工作动态",
             "path": "/gongxinbu/dongtai",
             "success": true,
             "status": 200,
-            "duration": 207,
+            "duration": 164,
             "size": 13105
         },
         {
@@ -37,7 +37,7 @@
             "path": "/jiaoyubu/jyyw",
             "success": true,
             "status": 200,
-            "duration": 172,
+            "duration": 54,
             "size": 754
         },
         {
@@ -45,31 +45,31 @@
             "path": "/netease/guoji",
             "success": true,
             "status": 200,
-            "duration": 289,
-            "size": 30921
+            "duration": 180,
+            "size": 30957
         },
         {
             "name": "新浪滚动新闻",
             "path": "/sina/rollnews",
             "success": true,
             "status": 200,
-            "duration": 219,
+            "duration": 166,
             "size": 616
         },
         {
             "name": "微博话题-热点",
             "path": "/weibo/topic/热点",
-            "success": false,
-            "status": 0,
-            "duration": 0,
-            "error": "Request path contains unescaped characters"
+            "success": true,
+            "status": 200,
+            "duration": 367,
+            "size": 753
         },
         {
             "name": "知乎日报",
             "path": "/zhihu/daily",
             "success": true,
             "status": 200,
-            "duration": 10,
+            "duration": 5,
             "size": 538
         },
         {
@@ -77,32 +77,32 @@
             "path": "/stats/category",
             "success": true,
             "status": 200,
-            "duration": 4,
+            "duration": 12,
             "size": 538
         },
         {
             "name": "进出口图表",
             "path": "/chart/exports",
-            "success": false,
-            "status": 0,
-            "duration": 10003,
-            "error": "timeout of 10000ms exceeded"
+            "success": true,
+            "status": 200,
+            "duration": 14,
+            "size": 3803
         },
         {
             "name": "首页",
             "path": "/",
             "success": true,
             "status": 200,
-            "duration": 41,
-            "size": 75329
+            "duration": 38,
+            "size": 74683
         },
         {
             "name": "API页面",
             "path": "/api",
             "success": true,
             "status": 200,
-            "duration": 37,
-            "size": 66149
+            "duration": 45,
+            "size": 65503
         }
     ],
     "categories": {
@@ -128,7 +128,7 @@
         },
         "weibo": {
             "total": 1,
-            "success": 0
+            "success": 1
         },
         "zhihu": {
             "total": 1,
@@ -140,7 +140,7 @@
         },
         "chart": {
             "total": 1,
-            "success": 0
+            "success": 1
         },
         "root": {
             "total": 1,
