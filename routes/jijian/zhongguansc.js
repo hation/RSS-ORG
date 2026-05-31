@@ -1,19 +1,9 @@
-const template = require('../template_page');
-
-const options = {
-    feed_title: '中共中央纪检委 中管审查',
-    feed_desc: '中共中央纪检委 中管审查',
-    feed_image: 'http://www.ccdi.gov.cn/banner.png',
-    feed_url: 'http://www.ccdi.gov.cn/scdc/zggb/zjsc/',
-    url: 'http://www.ccdi.gov.cn/scdc/scdc/zggb/zjsc/',
-    baseUrl: 'http://www.ccdi.gov.cn/scdc/zggb/zjsc/',
-    list_slr: ['li', '.list_news_dl.fixed'],
-    title_slr: 'a',
-    link_slr: 'a',
-    link_rel: true,
-    desc_slr: 'a',
-    time_slr: 'span',
-    cn: false,
+module.exports = async (ctx) => {
+    ctx.state.data = {
+        title: '中共中央纪检委 中管审查',
+        link: 'https://www.ccdi.gov.cn/zggb/sggb/zjsc/',
+        image: 'https://www.ccdi.gov.cn/banner.png',
+        description: '由于纪检委网站有严格的反爬虫机制，暂时无法直接获取数据。请访问官方网站查看最新信息。',
+        item: [],
+    };
 };
-
-module.exports = template(options);
