@@ -103,10 +103,19 @@ module.exports = (options) => async (ctx) => {
                         continue;
                     }
 
+                    // 处理链接
+                    let processedLink = link_map(link);
+                    // 如果链接已经是完整 URL，则不进行拼接
+                    if (!(processedLink.startsWith('http://') || processedLink.startsWith('https://'))) {
+                        if (options.link_rel) {
+                            processedLink = options.baseUrl + (processedLink.startsWith('/') ? processedLink : '/' + processedLink);
+                        }
+                    }
+
                     item = {
                         title: title,
                         description: desc,
-                        link: options.link_rel ? options.baseUrl + link_map(link) : link_map(link),
+                        link: processedLink,
                         pubDate: new Date(time_map(time)).toUTCString(),
                     };
                 } catch (e) {
