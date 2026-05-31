@@ -1,8 +1,8 @@
 {
-    "timestamp": "2026-05-31T03:59:31.244Z",
+    "timestamp": "2026-05-31T08:55:16.125Z",
     "summary": {
-        "total": 12,
-        "success": 12,
+        "total": 15,
+        "success": 15,
         "failed": 0,
         "warnings": 0,
         "successRate": 100
@@ -13,23 +13,23 @@
             "path": "/guowuyuan/xinwen",
             "success": true,
             "status": 200,
-            "duration": 220,
-            "size": 184131
+            "duration": 240,
+            "size": 184293
         },
         {
             "name": "国务院-动态",
             "path": "/guowuyuan/dongtai",
             "success": true,
             "status": 200,
-            "duration": 53,
-            "size": 184131
+            "duration": 148,
+            "size": 184293
         },
         {
             "name": "工信部-工作动态",
             "path": "/gongxinbu/dongtai",
             "success": true,
             "status": 200,
-            "duration": 164,
+            "duration": 259,
             "size": 13105
         },
         {
@@ -37,23 +37,47 @@
             "path": "/jiaoyubu/jyyw",
             "success": true,
             "status": 200,
-            "duration": 54,
+            "duration": 131,
             "size": 754
+        },
+        {
+            "name": "广电总局-通知公告",
+            "path": "/guangdian/tongzhi",
+            "success": true,
+            "status": 200,
+            "duration": 199,
+            "size": 21838
+        },
+        {
+            "name": "广电总局-电影备案",
+            "path": "/guangdian/movie-beian",
+            "success": true,
+            "status": 200,
+            "duration": 181,
+            "size": 9245
+        },
+        {
+            "name": "广电总局-电影许可",
+            "path": "/guangdian/movie-xuke",
+            "success": true,
+            "status": 200,
+            "duration": 101,
+            "size": 9056
         },
         {
             "name": "网易新闻-国际",
             "path": "/netease/guoji",
             "success": true,
             "status": 200,
-            "duration": 180,
-            "size": 30957
+            "duration": 1008,
+            "size": 30981
         },
         {
             "name": "新浪滚动新闻",
             "path": "/sina/rollnews",
             "success": true,
             "status": 200,
-            "duration": 166,
+            "duration": 199,
             "size": 616
         },
         {
@@ -61,7 +85,7 @@
             "path": "/weibo/topic/热点",
             "success": true,
             "status": 200,
-            "duration": 367,
+            "duration": 436,
             "size": 753
         },
         {
@@ -69,7 +93,7 @@
             "path": "/zhihu/daily",
             "success": true,
             "status": 200,
-            "duration": 5,
+            "duration": 12,
             "size": 538
         },
         {
@@ -77,7 +101,7 @@
             "path": "/stats/category",
             "success": true,
             "status": 200,
-            "duration": 12,
+            "duration": 16,
             "size": 538
         },
         {
@@ -85,7 +109,7 @@
             "path": "/chart/exports",
             "success": true,
             "status": 200,
-            "duration": 14,
+            "duration": 21,
             "size": 3803
         },
         {
@@ -93,16 +117,16 @@
             "path": "/",
             "success": true,
             "status": 200,
-            "duration": 38,
-            "size": 74683
+            "duration": 43,
+            "size": 75152
         },
         {
             "name": "API页面",
             "path": "/api",
             "success": true,
             "status": 200,
-            "duration": 45,
-            "size": 65503
+            "duration": 55,
+            "size": 65972
         }
     ],
     "categories": {
@@ -117,6 +141,10 @@
         "jiaoyubu": {
             "total": 1,
             "success": 1
+        },
+        "guangdian": {
+            "total": 3,
+            "success": 3
         },
         "netease": {
             "total": 1,

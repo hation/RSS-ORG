@@ -8,7 +8,9 @@ module.exports = (options) => async (ctx) => {
     try {
         let headers = {
             'User-Agent': config.ua,
-            Referer: options.baseUrl || '',
+            Referer: options.feed_url || options.baseUrl || '',
+            Accept: 'application/json, text/plain, */*',
+            'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
         };
         if (options.headers) {
             headers = Object.assign(headers, options.headers);

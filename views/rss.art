@@ -6,8 +6,8 @@
 {{ /if }}
     <channel>
         <title><![CDATA[{{@ title || 'Context News' }}]]></title>
-        <link>{{ link || 'https://https://news.mindynode.com' }}</link>
-        <description><![CDATA[{{@ description || title }} - Made by Context News(https://https://news.mindynode.com)]]></description>
+        <link>{{ link || 'https://news.mindynode.com' }}</link>
+        <description><![CDATA[{{@ description || title }} - Made by Context News(https://news.mindynode.com)]]></description>
         <generator>Context News</generator>
         <webMaster></webMaster>
         {{ if itunes_author }}<itunes:author>{{ itunes_author}}</itunes:author>{{ /if }}

@@ -2,6 +2,7 @@ const art = require('art-template');
 const path = require('path');
 const config = require('../config');
 const typeRegrx = /\.(atom|rss|json)$/;
+const xmlFormatter = require('xml-formatter');
 
 module.exports = async (ctx, next) => {
     ctx.state.type = ctx.request.path.match(typeRegrx) || ['', ''];
@@ -41,7 +42,20 @@ module.exports = async (ctx, next) => {
             ...ctx.state.data,
         };
         if (template) {
-            ctx.body = art(template, data);
+            let body = art(template, data);
+            // 格式化 XML 响应以提高可读性和软件解析成功率
+            if (ctx.state.type[1] === 'rss' || ctx.state.type[1] === 'atom' || template.includes('rss.art') || template.includes('atom.art')) {
+                try {
+                    body = xmlFormatter(body, {
+                        indentation: '  ', // 使用2个空格缩进
+                        collapseContent: true,
+                        lineSeparator: '\n',
+                    });
+                } catch (err) {
+                    console.error('XML 格式化失败:', err);
+                }
+            }
+            ctx.body = body;
         }
         if (ctx.url.includes('/chart/stats/')) {
             ctx.body = JSON.stringify(ctx.state.data);
