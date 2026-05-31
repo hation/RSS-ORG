@@ -19,6 +19,11 @@ const TEST_ROUTES = [
     { path: '/gongxinbu/dongtai', name: '工信部-工作动态', method: 'GET' },
     { path: '/jiaoyubu/jyyw', name: '教育部-教育要闻', method: 'GET' },
 
+    // 广电类路由
+    { path: '/guangdian/tongzhi', name: '广电总局-通知公告', method: 'GET' },
+    { path: '/guangdian/movie-beian', name: '广电总局-电影备案', method: 'GET' },
+    { path: '/guangdian/movie-xuke', name: '广电总局-电影许可', method: 'GET' },
+
     // 新闻媒体路由
     { path: '/netease/guoji', name: '网易新闻-国际', method: 'GET' },
     { path: '/sina/rollnews', name: '新浪滚动新闻', method: 'GET', params: { cate: 'news' } },
