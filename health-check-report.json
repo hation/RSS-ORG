@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-05-30T10:11:21.736Z",
+    "timestamp": "2026-05-30T16:12:03.941Z",
     "summary": {
         "total": 12,
         "success": 10,
@@ -13,23 +13,23 @@
             "path": "/guowuyuan/xinwen",
             "success": true,
             "status": 200,
-            "duration": 3343,
-            "size": 184067
+            "duration": 251,
+            "size": 184185
         },
         {
             "name": "国务院-动态",
             "path": "/guowuyuan/dongtai",
             "success": true,
             "status": 200,
-            "duration": 78,
-            "size": 184067
+            "duration": 87,
+            "size": 184185
         },
         {
             "name": "工信部-工作动态",
             "path": "/gongxinbu/dongtai",
             "success": true,
             "status": 200,
-            "duration": 237,
+            "duration": 207,
             "size": 13105
         },
         {
@@ -37,7 +37,7 @@
             "path": "/jiaoyubu/jyyw",
             "success": true,
             "status": 200,
-            "duration": 374,
+            "duration": 172,
             "size": 754
         },
         {
@@ -45,7 +45,7 @@
             "path": "/netease/guoji",
             "success": true,
             "status": 200,
-            "duration": 242,
+            "duration": 289,
             "size": 30921
         },
         {
@@ -53,7 +53,7 @@
             "path": "/sina/rollnews",
             "success": true,
             "status": 200,
-            "duration": 195,
+            "duration": 219,
             "size": 616
         },
         {
@@ -61,7 +61,7 @@
             "path": "/weibo/topic/热点",
             "success": false,
             "status": 0,
-            "duration": 1,
+            "duration": 0,
             "error": "Request path contains unescaped characters"
         },
         {
@@ -69,7 +69,7 @@
             "path": "/zhihu/daily",
             "success": true,
             "status": 200,
-            "duration": 9,
+            "duration": 10,
             "size": 538
         },
         {
@@ -77,7 +77,7 @@
             "path": "/stats/category",
             "success": true,
             "status": 200,
-            "duration": 5,
+            "duration": 4,
             "size": 538
         },
         {
@@ -85,7 +85,7 @@
             "path": "/chart/exports",
             "success": false,
             "status": 0,
-            "duration": 9995,
+            "duration": 10003,
             "error": "timeout of 10000ms exceeded"
         },
         {
@@ -93,16 +93,16 @@
             "path": "/",
             "success": true,
             "status": 200,
-            "duration": 44,
-            "size": 75880
+            "duration": 41,
+            "size": 75329
         },
         {
             "name": "API页面",
             "path": "/api",
             "success": true,
             "status": 200,
-            "duration": 39,
-            "size": 66593
+            "duration": 37,
+            "size": 66149
         }
     ],
     "categories": {

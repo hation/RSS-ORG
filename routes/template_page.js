@@ -19,7 +19,18 @@ module.exports = (options) => async (ctx) => {
         responseType: 'arraybuffer',
     });
 
-    let responseHtml = options.data_slr ? fn.get(JSON.parse(response.data), options.data_slr) : response.data;
+    // 尝试解析 JSON 响应
+    let responseHtml;
+    try {
+        const jsonData = JSON.parse(response.data.toString('utf8'));
+        if (jsonData.success && jsonData.data.html) {
+            responseHtml = options.data_slr ? fn.get(jsonData, options.data_slr) : jsonData.data.html;
+        } else {
+            responseHtml = response.data;
+        }
+    } catch (error) {
+        responseHtml = options.data_slr ? fn.get(JSON.parse(response.data), options.data_slr) : response.data;
+    }
     if (options.cn) {
         responseHtml = iconv.decode(response.data, 'gb2312');
     }
@@ -28,7 +39,8 @@ module.exports = (options) => async (ctx) => {
 
     if (options.patterns) {
         const htmlText = responseHtml.toString('utf8');
-        options.patterns.map((pattern) => {
+        options.patterns.forEach((pattern) => {
+            let match;
             while ((match = pattern.exec(htmlText)) !== null) {
                 chapter_items.push(match[1]);
             }
