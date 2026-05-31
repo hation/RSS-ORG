@@ -23,17 +23,51 @@ module.exports = (options) => async (ctx) => {
             timeout: 30000, // 30秒超时
         });
 
-        // 尝试解析 JSON 响应
+        // 尝试解析 JSON 或 XML 响应
         let responseHtml;
         try {
-            const jsonData = JSON.parse(response.data.toString('utf8'));
-            if (jsonData.success && jsonData.data.html) {
-                responseHtml = options.data_slr ? fn.get(jsonData, options.data_slr) : jsonData.data.html;
+            const dataStr = response.data.toString('utf8');
+
+            // 检查是否是 XML 响应（如知识产权局的情况）
+            if (dataStr.startsWith('<?xml') || dataStr.includes('<datastore>')) {
+                // 解析 XML 响应
+                // 先提取 recordset 部分
+                if (options.data_slr) {
+                    // 对于知识产权局的 data_slr 格式：recordset.record
+                    if (options.data_slr.includes('recordset')) {
+                        // 提取 <recordset><record><![CDATA[...]]></record></recordset> 中的内容
+                        const recordSetMatch = dataStr.match(/<recordset>([\s\S]*?)<\/recordset>/);
+                        if (recordSetMatch) {
+                            // 提取所有 record 项
+                            const records = [];
+                            const recordMatches = recordSetMatch[1].match(/<record><!\[CDATA\[([\s\S]*?)\]\]><\/record>/g);
+                            if (recordMatches) {
+                                recordMatches.forEach((record) => {
+                                    const contentMatch = record.match(/<record><!\[CDATA\[([\s\S]*?)\]\]><\/record>/);
+                                    if (contentMatch) {
+                                        records.push(contentMatch[1]);
+                                    }
+                                });
+                            }
+                            // 将 records 内容合并为 HTML
+                            responseHtml = records.join('');
+                        }
+                    }
+                } else {
+                    responseHtml = dataStr;
+                }
             } else {
-                responseHtml = response.data;
+                // 尝试解析 JSON 响应
+                const jsonData = JSON.parse(dataStr);
+                if (jsonData.success && jsonData.data.html) {
+                    responseHtml = options.data_slr ? fn.get(jsonData, options.data_slr) : jsonData.data.html;
+                } else {
+                    responseHtml = response.data;
+                }
             }
         } catch (error) {
-            responseHtml = options.data_slr ? fn.get(JSON.parse(response.data), options.data_slr) : response.data;
+            console.error('解析响应时出错:', error.message);
+            responseHtml = response.data;
         }
         if (options.cn) {
             responseHtml = iconv.decode(response.data, 'gb2312');
